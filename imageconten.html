@@ -1,0 +1,61 @@
+<html>
+    <head>hello</head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2? family=Poppins:wght@500&display=swap');
+*{
+    margin: 1px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}   
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} 
+.card{
+    width: 100%;
+    height: 150%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    position:relative;
+    transition: all .4s;
+}
+.card img{
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+    cursor: pointer;
+    z-index: 10;
+    transition: all .4s;
+}
+.card :hover img{
+    margin-top: -30px;
+}
+.card:hover{
+    width: 160px;
+}
+.card::before{
+    content: 'hotel';
+    letter-spacing: 0.2em;
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    color: rgb(51, 51, 51);
+    font-size: 0.6em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+        </style>
+    <body>
+        <div class="card">
+            <img src="C:\Users\ADMIN\Desktop\avatar.png"></div>
+    </body>
+</html>
