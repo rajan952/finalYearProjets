@@ -1,0 +1,188 @@
+<html>
+<head>
+<meta name="viewport"content="width=device-width, initial-scale=1">
+<style>
+* {
+   box-sizing: border-box;
+}
+ body {
+background-color: #f1f1f1;
+padding: 20px;
+font-family: arial
+}
+
+/* center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px-16px;
+}
+
+/* Add padding BETWEEN each column */
+.column {
+  padding: 8px;
+}
+
+
+/* creates three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* clear floats after rows */
+.row:after  {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+/* content */
+.content {
+ background-color: white;
+padding: 10px;
+}
+
+/* the "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* style the buttons */
+.btn {
+ border: none;
+ outline: none;
+ padding: 12px 16px;
+ background-color: white;
+ cursor: pointer;
+}
+
+.btn:hover { background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;}
+
+
+.btn.active {
+ background-color: #666;
+ color: white;
+}
+p{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<!-- MAIN (center website) -->
+<div class="main">
+<h1>HOTEL FOODS</h1>
+<hr>
+<h2>ITEMS</h2>
+
+<div id="mybtncontainer">
+<button class ="btn active"
+onclick="filterselection('all')"> SHOW ALL</button>
+
+<button class="btn"
+onclick="filterselection('FAST FOODS')"> FAST FOODS</button>
+
+<button class="btn"
+onclick="filterselection('DESERT')"> DESERT</button>
+
+<button class="btn"
+onclick="filterselection('HOME MADE FOODS')"> HOME MADE FOODS</button>
+</div>
+
+<!--protfolio gallery gird -->
+<div class="row">
+<div class="column FAST FOODS">
+<div class="content">
+<img src="C:\Users\ADMIN\Desktop\462874.jpg" alt="Pizza"style="width:100%"></img>
+<h4>Pizza</h4>
+<p>PRICE :250</p>
+</div>
+</div>
+
+<div class="column FAST FOODS">
+<div class="content">
+<img src="C:\Users\ADMIN\Desktop\hoteldawn.jpg" alt="FREAY CHIPS"style="width:100%"></img>
+<h4>FREAY CHIPS</h4>
+<p>PRICE: 100</p>
+</div>
+</div>
+
+<div class="column DESERT">
+<div class="content">
+<img src="C:\Users\ADMIN\Desktop\hoteldawn.jpg" alt="DESERT" style="width:100%"></img>
+<h4>CAKE</h4>
+<p>PRICE: 100</p>
+</div>
+
+</div>
+
+<div class="column HOME MADE FOODS">
+<div class="content">
+<img src="C:\Users\ADMIN\Desktop\hoteldawn.jpg" alt="DESERT" style="width:100%"></img>
+<h4> CHICKEN BRIYANI</h4>
+<p>PRICE: 400</p>
+</div>
+</div>
+
+
+<script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+  
+</body>
+</html>
