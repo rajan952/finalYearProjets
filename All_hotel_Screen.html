@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <title>HOTELS</title>
+    <head>
+<h1>HOTELS</h1>
+<style>
+    html , body{
+        margin: 0;
+        background-color: black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+        font-weight: 400;
+    }
+.food_card{
+    position: relative;
+    display: block;
+    width: 800px;
+    height: 350px;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+
+}
+
+.food_card:hover{
+    transform: scale(1.02);
+    transition: all 0.4s;
+}
+
+.food_card .info_section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+    }
+.food_card .info_section .food_header{
+    position: relative;
+    padding: 25px;
+    height: 40%;
+}
+.food_card .info_section .food_header h1{
+    color: #fff;
+    font-weight: 400;
+}
+.food_card .info_section .food_header h4{
+    color: #9ac7fa;
+    font-weight: 400;
+}
+.food_card .info_section .food_header .minutes{
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 2555, 0.13);
+}
+.food_card .info_section .food_header .type{
+    display: inline-block;
+    color: #cee4fd;
+    margin-left: 10px;
+}
+.food_card .info_section .food_header .locandina{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    height: 120px;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+.food_card .info_section .movie_desc{
+    padding: 25px;
+    height: 50px;
+}
+.food_card .info_section .movie_desc .text{
+    color: #cfd6e1;
+}
+.food_card .info_section .movie_social{
+   height: 10px;
+   padding-left: 15px;
+   padding-bottom: 20px; 
+}
+.food_card .info_section .movie_social ul{
+    list-style: none;
+    padding: 0;
+}
+.food_card .info_section .movie_social ul li{
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.3s;
+    transition-delay: 0.15s;
+    margin: 0 10px;
+}
+.food_card .info_section .movie_social ul li :hover{
+    transition:  color 0.3s;
+    color: rgba(255, 255, 255, 0.8);
+}
+.food_card .info_section .movie_social ul li i{
+    font-size: 19px;
+    cursor: pointer;
+}
+.food_card .blur_back{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    right: 0;
+    background-size: cover;
+    border-radius: 11px;
+}
+@media screen and (min-width: 768px){
+    .food_header{
+        width: 60%;
+    }
+    .movie_desc{
+        width: 50%;
+    }
+    .info_section{
+        background: linear-gradient(to right, #0d0d0c 50%, transparent 100px);
+    }
+    .blur_back{
+        width: 80%;
+        background-position: -100% 10% !important;
+    }
+}
+@media screen and (max-width: 768px){
+    .food_card{
+        width: 95%;
+        margin: 70px auto;
+        min-width: 350px;
+        height: auto;
+    }
+}
+</style>
+    </head>
+    <body>
+        <div class="hotel_card" id="bright">
+            <div class="info_section">
+                <div class="hotel_header">
+                    <img class="locandina" src="C:\Users\ADMIN\Desktop\HMS\462874.jpg">
+                    <h1>Pizza</h1>
+                    <h4>every one choose</h4>
+                    <span class="minutes">Rs:150</span>
+                    <p class="type">Italiyan style etc..></p>
+                </div>
+                <div class="movie_desc">
+                    <p class="text">
+                        abcdefghijklnopqrstuvwxyz
+                    </p>
+                </div>
+                <div class="Movie_social">
+                    <ul>
+                        <li><i class="material-icon">share</i></li>
+                        <li><i class="material-icon">click</i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="blur_back bright_back"></div>
+        </div>
+        
+    </body>
+</html>
