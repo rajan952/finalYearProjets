@@ -15,7 +15,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "hotel.html",
-            "file": "c:\\Users\\ADMIN\\Desktop\\HMS\\All_hotel_Screen.html"
+            "file": "c:\\Users\\ADMIN\\Desktop\\HMS\\hotel.html"
         }
     ]
 }
