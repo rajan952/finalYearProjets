@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKINGS</title>
+    <hr>
+    <div class="main">
+        margin: top;
+    <h1 style="text-align: center;color: rgb(27, 27, 26);background-color: white;">Bookings</h1>
+    <hr>
+    <style>
+        body {
+    padding: 50px;
+    height: 10%;
+    width: 10%;
+    background: #07051a;
+}
+
+form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 15px;
+    
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+    
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+form:hover{
+    width: 200px;
+    cursor: pointer;
+}
+
+form:hover input{
+    display: block;
+}
+
+form:hover .fa{
+    background: #07051a;
+    color: white;
+}
+
+.pill-nav a {
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #fffffff1;
+  border-radius: 50px;
+}
+
+.pill-nav a:hover {
+  background-color: #ddd;
+  color: black;
+  background: rgb(128, 255, 0);
+  box-shadow: 0 0 5px #8cee6e, 0 0 25px #8cee6e, 0 0 50px #8cee6e ,0 0 200px #8cee6e;
+
+}
+
+.pill-nav a.active {
+  background-color: rgb(0, 128, 255);
+  color: white;
+}
+.main{
+  max-width: 1000px;
+  margin: auto;
+}
+    </style>
+</head>
+</div>
+
+<body>
+    <div class="pill-nav">
+        <a href="hotel.html">Home</a>
+        <a href="aboutUS.html">About Us</a>
+        <a href="Register_form.html">Register form</a>
+        <a href="Allscreen.html">All Hotel</a>
+        <a  href="modal_form.html">Login</a>
+        <a class="active" href="newContact.html">Contact Us</a>
+  </div>
+    
+    <form action="">
+        <input type="search" placeholder="Search here ...">
+        <i class="fa fa-search"></i>
+      </form>
+</body>
+</html> 
