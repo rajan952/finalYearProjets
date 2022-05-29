@@ -1,6 +1,14 @@
+<?php
+$value1=$_POST['value1'];
+echo"enter two value:";
+$value2=$_POST['value2'];
+?>
+
 <!DOCTYPE html>
 <html>
   <title>LOGIN </title>
+  <link rel="icon" type="image/x-icon" href="loginicon.jpg">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <div class="main">
@@ -19,7 +27,6 @@
 
 .pill-nav a {
   display: inline-block;
-
   color: black;
   text-align: center;
   padding: 14px;
@@ -127,7 +134,7 @@
     <a href="hotel.html">Home</a>
     <a href="aboutUS.html">About Us</a>
     <a href="Register_form.html">Register form</a>
-   <a href="Allscreen.html">All Hotel</a>
+   <a href="hotels_display.html">All Hotel</a>
    <a class="active" href="modal_form.html">Login</a>
    <a href="newContact.html">Contact Us</a>
   </div>
@@ -177,3 +184,6 @@
   </body>
 </head>
 </html>
+<?php
+echo "result".(&value1+&value2);
+?>
